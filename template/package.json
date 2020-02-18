@@ -79,10 +79,10 @@
                               /if_eq}} {
                                 {
                                   /preset.lint}}
-                                  "@types/node": '11.9.5',
-                                  '@typescript-eslint/eslint-plugin': '^1.12.0',
-                                  '@typescript-eslint/parser': '^1.12.0',
-                                  typescript: '^3.3.3'
+                                  "@types/node": "11.9.5",
+                                  "@typescript-eslint/eslint-plugin": "^1.12.0",
+                                  "@typescript-eslint/parser": "^1.12.0",
+                                  "typescript": "^3.3.3",
 
                                   "@quasar/app": "^1.0.0"
                                 },
