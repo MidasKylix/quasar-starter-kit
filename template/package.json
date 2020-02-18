@@ -8,100 +8,50 @@
   "author": "{{ author }}",
   "private": true,
   "scripts": {
-    {
-      {
-        #
-        preset.lint
-      }
-    }
-    "lint": "eslint --ext .js,.vue src",
-    {
-      {
-        /preset.lint}}
-        "test": "echo \"No test specified\" && exit 0"
-      },
-      "dependencies": {
-        "quasar": "^1.0.0",
-        "@quasar/extras": "^1.0.0" {
-          {
-            #
-            preset.axios
-          }
-        },
-        "axios": "^0.18.1" {
-            {
-              /preset.axios}}{{#preset.i18n}},
-              "vue-i18n": "^8.0.0" {
-                {
-                  /preset.i18n}}
-                },
-                "devDependencies": {
-                  {
-                    {
-                      #
-                      preset.lint
-                    }
-                  }
-                  "babel-eslint": "^10.0.1",
-                  "eslint": "^6.8.0",
-                  "eslint-loader": "^3.0.3",
-                  "eslint-plugin-vue": "^6.1.2",
-                  {
-                    {
-                      #
-                      if_eq lintConfig "standard"
-                    }
-                  }
-                  "eslint-config-standard": "^14.1.0",
-                  "eslint-plugin-import": "^2.14.0",
-                  "eslint-plugin-node": "^11.0.0",
-                  "eslint-plugin-promise": "^4.0.1",
-                  "eslint-plugin-standard": "^4.0.0",
-                  {
-                    {
-                      /if_eq}} {
-                        {
-                          #
-                          if_eq lintConfig "airbnb"
-                        }
-                      }
-                      "eslint-config-airbnb-base": "^14.0.0",
-                      "eslint-plugin-import": "^2.20.1", {
-                        {
-                          /if_eq}} {
-                            {
-                              #
-                              if_eq lintConfig "prettier"
-                            }
-                          }
-                          "eslint-config-prettier": "^4.0.0", {
-                            {
-                              /if_eq}} {
-                                {
-                                  /preset.lint}}
-                                  "@types/node": '11.9.5',
-                                  '@typescript-eslint/eslint-plugin': '^1.12.0',
-                                  '@typescript-eslint/parser': '^1.12.0',
-                                  typescript: '^3.3.3'
-
-                                  "@quasar/app": "^1.0.0"
-                                },
-                                "engines": {
-                                  "node": ">= 10.18.1",
-                                  "npm": ">= 6.13.4",
-                                  "yarn": ">= 1.21.1"
-                                },
-                                "browserslist": [
-                                  "last 1 version, not dead, ie >= 11"
-                                ] {
-                                  {
-                                    #
-                                    preset.lint
-                                  }
-                                },
-                                "resolutions": {
-                                  "@babel/parser": "7.7.5"
-                                } {
-                                  {
-                                    /preset.lint}}
-                                  }
+    {{#preset.lint}}"lint": "eslint --ext .js,.vue src",{{/preset.lint}}
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "quasar": "^1.0.0",
+    "@quasar/extras": "^1.0.0"{{#preset.axios}},
+    "axios": "^0.18.1"{{/preset.axios}}{{#preset.i18n}},
+    "vue-i18n": "^8.0.0"{{/preset.i18n}}
+  },
+  "devDependencies": {
+    {{#preset.lint}}
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-vue": "^6.1.2",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
+    "typescript": "^3.3.3"
+    {{#if_eq lintConfig "standard"}}
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    {{/if_eq}}
+    {{#if_eq lintConfig "airbnb"}}
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    {{/if_eq}}
+    {{#if_eq lintConfig "prettier"}}
+    "eslint-config-prettier": "^4.0.0",
+    {{/if_eq}}
+    {{/preset.lint}}
+    "@quasar/app": "^1.0.0"
+  },
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]{{#preset.lint}},
+  "resolutions": {
+    "@babel/parser": "7.7.5"
+  }
+  {{/preset.lint}}
