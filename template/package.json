@@ -55,3 +55,4 @@
     "@babel/parser": "7.7.5"
   }
   {{/preset.lint}}
+}
